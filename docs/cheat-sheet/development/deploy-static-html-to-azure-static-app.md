@@ -1,0 +1,1 @@
+# Deploy static html site to Azure static web app

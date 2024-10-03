@@ -1,0 +1,6 @@
+site_name: Fente technical documentation
+docs_dir: docs
+theme:
+  name: readthedocs
+extra_css:
+  - css/customstyle.css
