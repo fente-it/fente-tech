@@ -1,4 +1,4 @@
-site_name: Fente technical documentation
+site_name: Fente IT technical documentation
 docs_dir: docs
 theme:
   name: readthedocs
