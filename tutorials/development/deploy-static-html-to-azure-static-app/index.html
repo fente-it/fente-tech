@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Deploy static html site to Azure static web app - Fente technical documentation</title>
+    <title>Deploy static html site to Azure static web app - Fente IT technical documentation</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -14,7 +14,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Deploy static html site to Azure static web app";
-        var mkdocs_page_input_path = "cheat-sheet\\development\\deploy-static-html-to-azure-static-app.md";
+        var mkdocs_page_input_path = "tutorials\\development\\deploy-static-html-to-azure-static-app.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -31,7 +31,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../../.." class="icon icon-home"> Fente technical documentation
+          <a href="../../.." class="icon icon-home"> Fente IT technical documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -48,12 +48,32 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Cheat sheet</span></p>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" >Development</a>
     <ul class="current">
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Deploy static html site to Azure static web app</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#guidelines-from-microsoft">Guidelines from Microsoft</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-install-swa-static-web-application-cli">1 Install SWA (Static Web Application) CLI</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-build-artifacts">2 Build artifacts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-create-the-azure-static-web-app">3 Create the Azure Static Web App</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-deploy-to-azure-using-swa-cli">4 Deploy to Azure using SWA CLI</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../use-md-with-mkdocs-to-document/">Use markdown and Mkdocs for documentation</a>
@@ -68,14 +88,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../..">Fente technical documentation</a>
+          <a href="../../..">Fente IT technical documentation</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Cheat sheet</li>
+          <li class="breadcrumb-item">Tutorials</li>
           <li class="breadcrumb-item">Development</li>
       <li class="breadcrumb-item active">Deploy static html site to Azure static web app</li>
     <li class="wy-breadcrumbs-aside">
@@ -87,6 +107,48 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="deploy-static-html-site-to-azure-static-web-app">Deploy static html site to Azure static web app</h1>
+<h2 id="description">Description</h2>
+<p>This tutorial is a step-by-step guide for deploy static web application where advanced build and deploy pipeline is not needed. It describes the steps of deploying your static files to an <a href="https://learn.microsoft.com/en-us/azure/static-web-apps/overview">Azure Static Web App</a>. The build and deploy pipeline can be added when needed, typically several developers working on same repository doing rapid changes (this is agility). </p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Azure CLI: <ul>
+<li>Installing the Azure CLI: <a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">Download the installer from the Azure CLI Installation page for Windows</a>.</li>
+</ul>
+</li>
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+<li>Node</li>
+</ul>
+<h3 id="guidelines-from-microsoft">Guidelines from Microsoft</h3>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/training/paths/azure-static-web-apps/">Learn Azure Static Web Apps</a></li>
+</ul>
+<h2 id="steps">Steps</h2>
+<h3 id="1-install-swa-static-web-application-cli">1 Install SWA (Static Web Application) CLI</h3>
+<p>In VS Code open the terminal and change the folder to the web application. Install CLI for the static web app using node. </p>
+<p><em><strong>Note</strong> For local installation the parameter -g can be skipped</em></p>
+<pre><code> npm install -g @azure/static-web-apps-cli
+</code></pre>
+<h3 id="2-build-artifacts">2 Build artifacts</h3>
+<p>If the application is an React, Vue or Anglar application it should be prepared for deployment. Meaning transforming code into browser-compatible JavaScript, optimizing minimizing files etc.</p>
+<p><em>For example a React application will generate the site in the build folder when running npm run build</em><br />
+<img alt="" src="../images/learningazurestaticwebapp-buildreact.png" /></p>
+<h3 id="3-create-the-azure-static-web-app">3 Create the Azure Static Web App</h3>
+<p>You can create the Azure Static Web App using Azure Portal or <a href="https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api/4-exercise-static-web-apps?ns-enrollment-type=learningpath&amp;ns-enrollment-id=learn.azure-static-web-apps&amp;pivots=angular">form VS Code</a> </p>
+<h3 id="4-deploy-to-azure-using-swa-cli">4 Deploy to Azure using SWA CLI</h3>
+<h4 id="login-to-your-azure-subscription">Login to your azure subscription</h4>
+<pre><code>/** Using az CLI **/
+az login
+
+/** or Using swa ClI **/
+ swa login
+</code></pre>
+<h4 id="deploy-to-the-azure-static-web-app">Deploy to the Azure static web app</h4>
+<pre><code>swa deploy &lt;folder to deploy&gt; --app-name &lt;name of the static web app&gt; --resource-group &lt;the static web app resource group&gt; --env &lt;environment&gt;
+</code></pre>
+<p><a href="https://azure.github.io/static-web-apps-cli/docs/cli/swa-deploy/">Overview of command arguments swa deploy | Static Web Apps CLI</a> </p>
+<p><em>Sample</em></p>
+<pre><code>swa deploy ./build --app-name fente-homepage --resource-group fente-homepage-rg --env production
+</code></pre>
               
             </div>
           </div><footer>

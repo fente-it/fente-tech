@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Use markdown and Mkdocs for documentation - Fente technical documentation</title>
+    <title>Use markdown and Mkdocs for documentation - Fente IT technical documentation</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -14,7 +14,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Use markdown and Mkdocs for documentation";
-        var mkdocs_page_input_path = "cheat-sheet\\development\\use-md-with-mkdocs-to-document.md";
+        var mkdocs_page_input_path = "tutorials\\development\\use-md-with-mkdocs-to-document.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -31,7 +31,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../../.." class="icon icon-home"> Fente technical documentation
+          <a href="../../.." class="icon icon-home"> Fente IT technical documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -48,7 +48,7 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Cheat sheet</span></p>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" >Development</a>
     <ul class="current">
@@ -64,9 +64,11 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#2-create-site">2 Create site</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-change-the-style">3 Change the style</a>
+    <li class="toctree-l4"><a class="reference internal" href="#3-change-the-style-optional">3 Change the style (optional)</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#4-deploy-the-site">4 Deploy the site</a>
+    <li class="toctree-l4"><a class="reference internal" href="#4-build-the-site">4 Build the site</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#5-deploy-the-site">5 Deploy the site</a>
     </li>
         </ul>
     </li>
@@ -82,14 +84,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../..">Fente technical documentation</a>
+          <a href="../../..">Fente IT technical documentation</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Cheat sheet</li>
+          <li class="breadcrumb-item">Tutorials</li>
           <li class="breadcrumb-item">Development</li>
       <li class="breadcrumb-item active">Use markdown and Mkdocs for documentation</li>
     <li class="wy-breadcrumbs-aside">
@@ -103,57 +105,60 @@
                 <h1 id="use-markdown-and-mkdocs-for-documentation">Use markdown and Mkdocs for documentation</h1>
 <p>MkDocs is a powerful tool that generates static HTML sites from Markdown files. If you want developers to document their work effectively, it's important to keep the documentation close to the code. Markdown is a natural fit for this purpose, as it integrates seamlessly with code repositories. To learn more, visit <a href="https://www.mkdocs.org">mkdocs.org</a></p>
 <h2 id="prerequisite">Prerequisite</h2>
-<p>You need phyton installed. You can install Python using:</p>
+<p><a href="https://www.python.org/">Phyton</a> is required. Python can be installed using:</p>
 <ul>
 <li>Chocolatey (on Windows)</li>
 <li>Homebrew (on macOS)</li>
 <li>APT (on Linux)</li>
 <li>Python's official installer (from Welcome to Python.org )</li>
 </ul>
-<p>Note! This guide works on Windows. Se repository generated <a href="https://github.com/fente-it/mkdocs-learning">here</a></p>
+<p>Note! This guide works on Windows. Both Powershell and Gitbash can be used as commandline tool. </p>
 <h2 id="steps">Steps</h2>
+<p>The repository of the sample application refered to in the tutorial can be found <a href="https://github.com/fente-it/mkdocs-learning">here</a>. </p>
 <h3 id="1-install-mkdocs">1 Install Mkdocs</h3>
-<p>Use pythons package manager pip to install mkdocs</p>
+<p>Open the commandline tool (Powershell or GitBash) and use Pythons package manager, pip, to install mkdocs.</p>
 <pre><code>$ pip install mkdocs
 </code></pre>
-<p>You are now ready to create the document.</p>
 <h3 id="2-create-site">2 Create site</h3>
-<p>MkDocs should now be in your path. If not you can find in the python installation C:\ProgramData\chocolatey\lib\python3\tools\Scripts.</p>
-<p>Create documentation by Run</p>
+<p>MkDocs should now be in the windows path. If not, it can be found in the python installation For example in the folder <em>C:\Python312\Scripts</em></p>
+<p>Create documentation site:</p>
 <pre><code>$ mkdocs new &lt;name of documentation&gt;
 </code></pre>
 <details class="sample">
 <summary>Sample</summary>
 <p><img alt="create mk docs" src="../images/learningmkdocs.png" /></p>
 </details>
-<p>Host the documentation by running. </p>
+<p>Host the documentation locally: </p>
 <pre><code>$ mkdocs serve
 </code></pre>
-<p>The serve will build (meaning generate the html and js files) and run a local host for you. You can see the files in the site folder generated.</p>
-<h3 id="3-change-the-style">3 Change the style</h3>
-<p>To change the style add a custom css file and change the mkdocs.yml file
+<p>The serve will build (meaning generate the html and js files) and run a local host.</p>
+<h3 id="3-change-the-style-optional">3 Change the style (optional)</h3>
+<p>Add a custom css file and change the mkdocs.yml file
 <img alt="" src="../images/learningmkdocs-style.png" /></p>
-<h3 id="4-deploy-the-site">4 Deploy the site</h3>
-<p>Before you deploy you need to build the site so that it can generate html and javascript sites</p>
+<h3 id="4-build-the-site">4 Build the site</h3>
+<p>Before you deploy you need to build the site so that it can generate html and javascript sites.</p>
 <pre><code>$ mkdocs build
 </code></pre>
-<details class="note">
-<summary>The files will be generated in a site folder as shown below. This is the folder to deploy</summary>
+<p>The html and javascript files will be generated in a <em>site</em> folder as shown below. It is the <em>site</em> folder that should be deployd to the preferred host.</p>
+<details class="site" open="open">
+<summary>Site</summary>
 <p><img alt="" src="../images/learningmkdocs-build.png" /></p>
 </details>
-<h4 id="41-deploy-to-github">4.1 Deploy to Github</h4>
-<p>The simplest way is to deploy to a GitHub site. You need to have an existing git repository. Create a repository in GitHub and follow the guideline on how to </p>
-<p><em><strong>Note</strong>: the md files in a repository like github or Azure Devops to not the changes and keep track of history</em></p>
+<h3 id="5-deploy-the-site">5 Deploy the site</h3>
+<p>There are several ways to host the site. Below describes how to deploy to a GitHub Page and Azure Static Web App. Note that this is done manually using command line interface (CLI). The next step is to integrate this in a CI/CD pipeline. </p>
+<p><em><strong>Note</strong>: The markdown files should be kept in a versioncontrol repository like GitHub or Azure DevOps to keep track of history</em>. </p>
+<h4 id="41-deploy-to-a-github-page">4.1 Deploy to a GitHub Page</h4>
+<p>The simplest way is to deploy to a <a href="https://pages.github.com/">GitHub Page</a>. You need to have an existing git repository. Create a repository in GitHub and follow the guideling on GitHub to initialize the local repository with the GitHub repository. </p>
 <pre><code>$ mkdocs gh-deploy
 </code></pre>
-<p>The deploy will generate a new branch called gh-pages and deploy to a github site. </p>
+<p>The deploy will generate a new branch called <em>gh-pages</em> and deploy to a GitHub site. </p>
 <details open="open">
 <summary>Sample in <a href="https://github.com/fente-it/mkdocs-learning">mkdocs-learning</a></summary>
 <p><img alt="" src="../images/learningmkdocs-deploy.png" /></p>
 <p><img alt="" src="../images/learningmkdocs-deployment2.png" /></p>
 </details>
 <h4 id="42-deploy-to-azure-static-web-app">4.2 Deploy to Azure Static Web App</h4>
-<p>Howto deploy files to Azure static web App is explained <a href="../deploy-static-html-to-azure-static-app/">here</a></p>
+<p>Howto deploy files to <a href="https://learn.microsoft.com/en-us/azure/static-web-apps/overview">Azure Static Web App</a> is explained <a href="../deploy-static-html-to-azure-static-app/">here</a></p>
               
             </div>
           </div><footer>
