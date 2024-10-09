@@ -1,7 +1,11 @@
 /* Change the background color of the navigation menu */
 
+.wy-side-nav-search>a, .wy-menu-vertical a, .wy-menu-vertical p.caption {
+    color: black;
+}
 .wy-side-nav-search {
     background-color: #bec1e6;
+    color: black;
 }
 
 .wy-nav-side {
@@ -10,9 +14,31 @@
 }
 
 /*Mobile*/
-.wy-nav-top{
+.wy-nav-top, .wy-nav-top a{
     background-color: #bec1e6;
+    color: black;
 }
+
+
+.rst-content .section ol li>a,
+.rst-content .section ul li>a,
+.rst-content .toctree-wrapper ol li>a,
+.rst-content .toctree-wrapper ul li>a,
+.rst-content section ol li>a,
+.rst-content section ul li>a {
+    color:  blue;
+    text-decoration: underline!important;
+}
+
+footer a, footer a:visited{
+    color:  blue;
+    text-decoration: underline!important;
+}
+
+footer {
+    color: black;
+}
+
 
 
 
