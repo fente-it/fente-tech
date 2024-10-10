@@ -35,3 +35,4 @@ It is easy to get lost in all the different standards, laws, regulations and dir
 - [SOC 2](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2): SOC 2 is a cybersecurity compliance framework developed for service and technology providers that handle customer data.
     - [SOC 1 vs SOC 2 vs SOC 3](https://secureframe.com/hub/soc-2/soc-1-vs-soc-2-vs-soc-3)
 - [PCI DSS](https://www.pcisecuritystandards.org/): Guide on howto protect card information. See [guideline](https://listings.pcisecuritystandards.org/documents/PCI_DSS-QRG-v3_2_1.pdf)
+- [Information Security Forum (ISF)](https://www.securityforum.org/)
