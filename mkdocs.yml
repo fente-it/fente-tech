@@ -1,9 +1,11 @@
 site_name: Fente IT technical cookbook
 docs_dir: docs
 theme:
-  name: readthedocs
+  name: material
+  logo: assets/favicon-32x32.png
+  favicon: assets/favicon.io
 extra_css:
-  - css/customstyle.css
+  - css/material.css
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 markdown_extensions:

@@ -30,9 +30,13 @@ It is easy to get lost in all the different standards, laws, regulations and dir
 
 ## Standards and guidelines
 
+Useful standards and guidelines
+
 - [ISO 27001](https://www.digdir.no/informasjonssikkerhet/kva-seier-ns-isoiec-27001/3060): Guideline to create ISMS - Information security management system
 - [ISO 27002](https://www.isms.online/iso-27002/): Provides a set of information security, cyber security and privacy protection controls, including implementation guidance based on internationally recognised best practices.
 - [SOC 2](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2): SOC 2 is a cybersecurity compliance framework developed for service and technology providers that handle customer data.
     - [SOC 1 vs SOC 2 vs SOC 3](https://secureframe.com/hub/soc-2/soc-1-vs-soc-2-vs-soc-3)
 - [PCI DSS](https://www.pcisecuritystandards.org/): Guide on howto protect card information. See [guideline](https://listings.pcisecuritystandards.org/documents/PCI_DSS-QRG-v3_2_1.pdf)
 - [Information Security Forum (ISF)](https://www.securityforum.org/)
+- [Nist](https://www.nist.gov/)
+- [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/)
