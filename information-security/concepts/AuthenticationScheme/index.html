@@ -20,7 +20,7 @@
     
     
       
-        <title>Authentication scheme - Fente IT technical cookbook</title>
+        <title>Authentication in HTTP - Fente IT technical cookbook</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#authentication-scheme" class="md-skip">
+        <a href="#authentication-in-http" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Authentication scheme
+              Authentication in HTTP
             
           </span>
         </div>
@@ -362,16 +362,65 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Authentication in HTTP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Authentication scheme
+    Authentication in HTTP
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-response-authentication-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge-response authentication scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -566,6 +615,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-response-authentication-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge-response authentication scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -580,7 +655,21 @@
 
 
 
-<h1 id="authentication-scheme">Authentication scheme</h1>
+<h1 id="authentication-in-http">Authentication in HTTP</h1>
+<p><a href="">IETF community</a> has published a specification outlining authentication in HTTP: <a href="https://datatracker.ietf.org/doc/html/rfc7235">Hypertext Transfer Protocol (HTTP/1.1): Authentication</a>. When working with authentication, it is crucial to understand the concept of challenge-response authentication schemes.</p>
+<blockquote>
+<p>HTTP provides a general framework for access control and authentication, via an extensible set of challenge-response   &gt;authentication schemes</p>
+<p><em>reference <a href="https://datatracker.ietf.org/doc/html/rfc7235">IETF - HTTP: Authentication</a>.</em></p>
+</blockquote>
+<h2 id="challenge-response-authentication-scheme">Challenge-response authentication scheme</h2>
+<p>An authentication scheme can  be used by a server to challenge a client request and by a client to provide authentication information see <a href="https://datatracker.ietf.org/doc/html/rfc7235#section-1">Introduction section</a> and <a href="https://datatracker.ietf.org/doc/html/rfc7235#section-4.2">Authorization</a>. The authentication scheme defines how the credentials are encoded. </p>
+<p>HTTP Headers and response status codes are used in the challenge-response between server and client to provide authentication information.  </p>
+<p>List of provided authentication schemes can be found here <a href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">Authentication scheme registry</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication">Mozilla</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7235">IETF Authentication</a></li>
+</ul>
 
 
 
